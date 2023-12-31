@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+.input-otp {
+  width: 50px;
+  height: 60px;
+  margin-right: 30px;
+  border: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: #bcbcbc;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+}
+.input-otp:focus {
+  border-color: #1E90FF;
+  outline: none;
+}
+
+@media (max-width: 500px) {
+  .outer-border {
+    border: none;
+    margin-top: 20px;
+  }
+}
